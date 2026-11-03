@@ -16,6 +16,8 @@ namespace KawaSRL
                 Response.Redirect("Login.aspx");
                 return;
             }
+
+            lblBienvenida.Text = "Usuario: " + Session["nombreUsuario"].ToString();
         }
     }
 }
