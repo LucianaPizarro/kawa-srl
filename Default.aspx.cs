@@ -11,7 +11,13 @@ namespace KawaSRL
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["idUsuario"] == null)
+            {
+                Response.Redirect("Login.aspx");
+                return;
+            }
 
+            lblBienvenida.Text = "Usuario: " + Session["nombreUsuario"].ToString();
         }
     }
 }
