@@ -8,7 +8,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{6092E1EA-EB3E-48A0-AB13-31AC77317058}</ProjectGuid>
+    <ProjectGuid>{8EB87CBF-D7F7-3A67-05EB-E3B0A437B8FA}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -122,6 +122,8 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
+    <Content Include="OrdenesCompra.aspx" />
+    <Content Include="PedidosPendientes.aspx" />
     <Content Include="PruebaConexion.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -218,7 +220,21 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="OrdenesCompra.aspx.cs">
+      <DependentUpon>OrdenesCompra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrdenesCompra.aspx.designer.cs">
+      <DependentUpon>OrdenesCompra.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PasswordHelper.cs" />
+    <Compile Include="PedidosPendientes.aspx.cs">
+      <DependentUpon>PedidosPendientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PedidosPendientes.aspx.designer.cs">
+      <DependentUpon>PedidosPendientes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PruebaConexion.aspx.cs">
       <DependentUpon>PruebaConexion.aspx</DependentUpon>

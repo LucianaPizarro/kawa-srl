@@ -10,6 +10,18 @@
 
         <p class="lead">
             <asp:Label ID="lblBienvenida" runat="server"></asp:Label>
+            <br /><br />
+         <asp:HyperLink
+    ID="lnkOrdenesCompra"
+    runat="server"
+    NavigateUrl="~/OrdenesCompra.aspx"
+    Text="Gestión de Órdenes de Compra" />
+            <br />
+<asp:HyperLink
+    ID="lnkPedidosPendientes"
+    runat="server"
+    NavigateUrl="~/PedidosPendientes.aspx"
+    Text="Gestión de Pedidos Pendientes" />
         </p>
 
         <p>Has iniciado sesión correctamente.</p>
