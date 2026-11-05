@@ -19,5 +19,8 @@ jobs:
       - name: Configurar MSBuild
         uses: microsoft/setup-msbuild@v2
 
+      - name: Restaurar paquetes NuGet
+        run: nuget restore KawaSRL.csproj -PackagesDirectory packages
+
       - name: Compilar proyecto
         run: msbuild KawaSRL.csproj /p:Configuration=Release
