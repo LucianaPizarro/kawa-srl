@@ -28,6 +28,12 @@
     runat="server"
     NavigateUrl="~/TalonesEnvio.aspx"
     Text="Gestión de Talones de Envío" />
+       <br />
+<asp:HyperLink
+    ID="lnkEnviosOrdenCompra"
+    runat="server"
+    NavigateUrl="~/EnviosOrdenCompra.aspx"
+    Text="Gestión de Envíos de Órdenes de Compra" />
         </p>
 
         <p>Has iniciado sesión correctamente.</p>
