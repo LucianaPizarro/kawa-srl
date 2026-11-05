@@ -22,6 +22,12 @@
     runat="server"
     NavigateUrl="~/PedidosPendientes.aspx"
     Text="Gestión de Pedidos Pendientes" />
+            <br />
+            <asp:HyperLink
+    ID="lnkTalonesEnvio"
+    runat="server"
+    NavigateUrl="~/TalonesEnvio.aspx"
+    Text="Gestión de Talones de Envío" />
         </p>
 
         <p>Has iniciado sesión correctamente.</p>
