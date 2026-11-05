@@ -88,6 +88,7 @@ namespace KawaSRL
                         ON DOC.idOrdenCompra = OC.idOrdenCompra
                     INNER JOIN Modelo M
                         ON DOC.idModelo = M.idModelo
+                    WHERE PP.estado = 'Pendiente'
                     ORDER BY PP.idPedidoPendiente DESC";
 
                 using (SqlCommand comando = new SqlCommand(consulta, conexion))

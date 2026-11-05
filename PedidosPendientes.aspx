@@ -91,10 +91,32 @@
             <h2>Pedidos pendientes registrados</h2>
 
             <asp:GridView ID="gvPedidosPendientes" runat="server"
-                AutoGenerateColumns="true"
-                CssClass="tabla"
-                EmptyDataText="Todavía no hay pedidos pendientes registrados.">
-            </asp:GridView>
+    AutoGenerateColumns="false"
+    CssClass="tabla"
+    EmptyDataText="Todavía no hay pedidos pendientes registrados.">
+
+    <Columns>
+        <asp:BoundField DataField="idPedidoPendiente"
+            HeaderText="N.º Pedido Pendiente" />
+
+        <asp:BoundField DataField="idOrdenCompra"
+            HeaderText="N.º Orden de Compra" />
+
+        <asp:BoundField DataField="Modelo"
+            HeaderText="Modelo" />
+
+        <asp:BoundField DataField="cantidadPendiente"
+            HeaderText="Cantidad Pendiente" />
+
+        <asp:BoundField DataField="fechaRegistro"
+            HeaderText="Fecha de Registro"
+            DataFormatString="{0:dd/MM/yyyy}" />
+
+        <asp:BoundField DataField="estado"
+            HeaderText="Estado" />
+    </Columns>
+
+</asp:GridView>
 
         </div>
 
