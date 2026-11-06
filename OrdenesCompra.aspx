@@ -1,85 +1,101 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="OrdenesCompra.aspx.cs" Inherits="KawaSRL.OrdenesCompra" %>
+﻿
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="OrdenesCompra.aspx.cs" Inherits="KawaSRL.OrdenesCompra" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta charset="utf-8" />
-    <title>Gestión de Órdenes de Compra - KAWA</title>
-    <style>
-        body {
-            font-family: Arial;
-            background-color: #f3f6f4;
-            margin: 40px;
-        }
-
-        .contenedor {
-            max-width: 1000px;
-            margin: auto;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-        }
-
-        h1 {
-            color: #245b43;
-        }
-
-        .boton {
-            background-color: #245b43;
-            color: white;
-            padding: 10px 18px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        .mensaje {
-            display: block;
-            margin-top: 15px;
-            font-weight: bold;
-        }
-
-        .tabla {
-            margin-top: 20px;
-        }
-    </style>
+    <title>Órdenes de Compra - KAWA</title>
+    <link href="<%= ResolveUrl("~/Content/Site.css") %>" rel="stylesheet" />
 </head>
-<body>
+<body class="kawa-page">
+
     <form id="form1" runat="server">
-        <div class="contenedor">
 
-            <h1>Gestión de Órdenes de Compra</h1>
+        <main class="kawa-management">
 
-            <p>Seleccione una Nota de Pedido aprobada para generar su Orden de Compra definitiva.</p>
+            <header class="management-header">
+                <div class="management-brand">
+                    <div class="management-logo">K</div>
+                    <div>
+                        <h1>KAWA</h1>
+                        <span>SISTEMA DE GESTIÓN</span>
+                    </div>
+                </div>
 
-            <asp:Label ID="lblNota" runat="server"
-                Text="Nota de Pedido:"></asp:Label>
+                <div class="management-heading">
+                    <span class="management-eyebrow">MÓDULO DE COMPRAS</span>
+                    <h2>Gestión de Órdenes de Compra</h2>
+                    <p>Generación y administración de órdenes de compra definitivas.</p>
+                </div>
+            </header>
 
-            <br /><br />
+            <section class="management-content">
 
-            <asp:DropDownList ID="ddlNotasPedido" runat="server"
-                Width="350px">
-            </asp:DropDownList>
+                <div class="management-card">
+                    <div class="card-heading">
+                        <h3>Generar Orden de Compra</h3>
+                        <p>Seleccione una Nota de Pedido aprobada para generar su Orden de Compra definitiva.</p>
+                    </div>
 
-            <br /><br />
+                    <div class="management-form">
+                        <asp:Label ID="lblNota" runat="server"
+                            Text="Nota de Pedido:"
+                            CssClass="management-label"></asp:Label>
 
-            <asp:Button ID="btnGenerar" runat="server"
-                Text="Generar Orden de Compra"
-                CssClass="boton"
-                OnClick="btnGenerar_Click" />
+                        <asp:DropDownList ID="ddlNotasPedido" runat="server"
+                            Width="350px" CssClass="management-select">
+                        </asp:DropDownList>
 
-            <asp:Label ID="lblMensaje" runat="server"
-                CssClass="mensaje"></asp:Label>
+                        <asp:Button ID="btnGenerar" runat="server"
+                            Text="Generar Orden de Compra"
+                            CssClass="management-button"
+                            OnClick="btnGenerar_Click" />
 
-            <h2>Órdenes de Compra generadas</h2>
+                        <asp:Label ID="lblMensaje" runat="server"
+                            CssClass="management-message"></asp:Label>
+                    </div>
+                </div>
 
-            <asp:GridView ID="gvOrdenes" runat="server"
-                AutoGenerateColumns="true"
-                CssClass="tabla"
-                EmptyDataText="Todavía no hay Órdenes de Compra generadas.">
-            </asp:GridView>
+                <div class="management-card">
+                    <div class="card-heading">
+                        <h3>Órdenes de Compra generadas</h3>
+                        <p>Listado de órdenes registradas en el sistema.</p>
+                    </div>
 
-        </div>
-    </form>
-</body>
-</html>
+                    <div class="table-container">
+                        <asp:GridView ID="gvOrdenes" runat="server"
+                            AutoGenerateColumns="false"
+                            CssClass="tabla"
+                            EmptyDataText="Todavía no hay Órdenes de Compra generadas.">
+
+                            <Columns>
+                                <asp:BoundField DataField="idOrdenCompra"
+                                    HeaderText="N.º Orden de Compra" />
+
+                                <asp:BoundField DataField="idNotaPedido"
+                                    HeaderText="N.º Nota de Pedido" />
+
+                                <asp:BoundField DataField="fechaEmision"
+                                    HeaderText="Fecha de emisión"
+                                    DataFormatString="{0:dd/MM/yyyy}" />
+
+                                <asp:BoundField DataField="estado"
+                                    HeaderText="Estado" />
+
+                                <asp:BoundField DataField="razonSocial"
+                                    HeaderText="Proveedor" />
+                            </Columns>
+
+                        </asp:GridView>
+                    </div>
+                </div>
+
+                <footer class="management-footer">
+                    KAWA S.R.L. | Sistema de Gestión
+                </footer>
+
+            </section>
+</main>
+</form>
+</body></html>

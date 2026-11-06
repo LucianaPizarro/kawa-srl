@@ -15,6 +15,15 @@ namespace KawaSRL
     {
 
         /// <summary>
+        /// Control lblOrden.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblOrden;
+
+        /// <summary>
         /// Control ddlOrdenCompra.
         /// </summary>
         /// <remarks>
@@ -22,6 +31,15 @@ namespace KawaSRL
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlOrdenCompra;
+
+        /// <summary>
+        /// Control lblMedio.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMedio;
 
         /// <summary>
         /// Control ddlMedioEnvio.
@@ -33,6 +51,15 @@ namespace KawaSRL
         protected global::System.Web.UI.WebControls.DropDownList ddlMedioEnvio;
 
         /// <summary>
+        /// Control lblFecha.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblFecha;
+
+        /// <summary>
         /// Control txtFechaEnvio.
         /// </summary>
         /// <remarks>
@@ -42,6 +69,15 @@ namespace KawaSRL
         protected global::System.Web.UI.WebControls.TextBox txtFechaEnvio;
 
         /// <summary>
+        /// Control lblReferencia.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblReferencia;
+
+        /// <summary>
         /// Control txtReferencia.
         /// </summary>
         /// <remarks>
@@ -49,6 +85,15 @@ namespace KawaSRL
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtReferencia;
+
+        /// <summary>
+        /// Control lblObservaciones.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblObservaciones;
 
         /// <summary>
         /// Control txtObservaciones.

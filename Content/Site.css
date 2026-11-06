@@ -1,21 +1,594 @@
-﻿/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
-.body-content {
+﻿
+/* ================================
+   KAWA - IDENTIDAD VISUAL
+================================ */
+
+.login-page {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #142b3a, #263f50);
+}
+
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 15px;
+    box-sizing: border-box;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 430px;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 42px;
+    box-sizing: border-box;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+}
+
+.login-brand {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.login-logo {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #bd914b;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    border-radius: 12px;
+}
+
+.login-brand h1 {
+    margin: 0;
+    color: #193448;
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+.login-brand p {
+    margin-top: 5px;
+    color: #bd914b;
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+.login-heading {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+    .login-heading h2 {
+        color: #193448;
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+
+    .login-heading p {
+        color: #7b8790;
+        font-size: 14px;
+    }
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-label {
+    color: #344b5a;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 14px 0 8px;
+}
+
+.login-input {
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+    padding: 13px 14px;
+    border: 1px solid #d9e0e5;
+    border-radius: 7px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+    .login-input:focus {
+        border-color: #bd914b;
+        box-shadow: 0 0 0 3px rgba(189, 145, 75, 0.15);
+    }
+
+.login-button {
+    width: 100%;
+    max-width: none;
+    margin-top: 28px;
+    padding: 14px;
+    border: none;
+    border-radius: 7px;
+    background: #193448;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+    .login-button:hover {
+        background: #bd914b;
+    }
+
+.login-message {
+    color: #c0392b;
+    font-size: 13px;
+    text-align: center;
     margin-top: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
 }
 
-/* Set widths on the form inputs since otherwise they're 100% wide */
-input,
-select,
-textarea {
-    max-width: 280px;
+.login-footer {
+    border-top: 1px solid #edf0f2;
+    margin-top: 30px;
+    padding-top: 20px;
+    text-align: center;
+    color: #89949c;
+    font-size: 11px;
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-    .body-content {
-        padding: 0;
+@media (max-width: 480px) {
+    .login-card {
+        padding: 30px 24px;
     }
 }
+
+
+/* ==================================
+   KAWA - PANEL PRINCIPAL
+================================== */
+
+.kawa-dashboard {
+    max-width: 1150px;
+    margin: 45px auto;
+    padding: 0 20px;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.dashboard-header {
+    background: linear-gradient(135deg, #193448, #294b5e);
+    color: white;
+    border-radius: 14px;
+    padding: 35px 40px;
+    box-shadow: 0 8px 25px rgba(20, 43, 58, .15);
+}
+
+.dashboard-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(255,255,255,.18);
+}
+
+.dashboard-logo {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #bd914b;
+    border-radius: 10px;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.dashboard-brand h1 {
+    margin: 0;
+    font-size: 27px;
+    letter-spacing: 5px;
+}
+
+.dashboard-brand span {
+    color: #d8b77e;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.dashboard-welcome {
+    padding-top: 25px;
+}
+
+    .dashboard-welcome h2 {
+        margin: 0 0 8px;
+        font-size: 25px;
+    }
+
+    .dashboard-welcome p {
+        color: #d5e0e6;
+        margin-bottom: 10px;
+    }
+
+.welcome-user {
+    color: #e4c48e;
+    font-weight: 600;
+}
+
+.dashboard-content {
+    padding: 35px 5px;
+}
+
+.section-heading h2 {
+    color: #193448;
+    font-size: 22px;
+    margin-bottom: 7px;
+}
+
+.section-heading p {
+    color: #7b8790;
+    margin-bottom: 25px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.dashboard-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 185px;
+    padding: 25px;
+    background: white;
+    border: 1px solid #e3e8eb;
+    border-radius: 12px;
+    text-decoration: none !important;
+    box-shadow: 0 4px 15px rgba(25, 52, 72, .05);
+    transition: transform .2s, box-shadow .2s, border-color .2s;
+}
+
+    .dashboard-card:hover {
+        transform: translateY(-4px);
+        border-color: #bd914b;
+        box-shadow: 0 9px 22px rgba(25, 52, 72, .12);
+    }
+
+.card-icon {
+    width: 43px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5efe4;
+    color: #a77b36;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 17px;
+}
+
+.card-title {
+    color: #193448;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 9px;
+}
+
+.card-description {
+    color: #78858e;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.card-action {
+    color: #a77b36;
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: auto;
+    padding-top: 18px;
+}
+
+.dashboard-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 35px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e9ec;
+    color: #89949c;
+    font-size: 12px;
+}
+
+@media (max-width: 650px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-header {
+        padding: 25px;
+    }
+
+    .dashboard-footer {
+        flex-direction: column;
+    }
+}
+
+
+
+/* ==================================
+   KAWA - PANTALLAS DE GESTION
+================================== */
+
+.kawa-page {
+    margin: 0;
+    min-height: 100vh;
+    background: #f4f6f7;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.kawa-management {
+    max-width: 1150px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.management-header {
+    background: linear-gradient(135deg, #193448, #294b5e);
+    color: white;
+    border-radius: 14px;
+    padding: 30px 38px;
+    box-shadow: 0 8px 25px rgba(20, 43, 58, .12);
+}
+
+.management-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid rgba(255,255,255,.18);
+}
+
+.management-logo {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #bd914b;
+    border-radius: 9px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.management-brand h1 {
+    margin: 0;
+    font-size: 25px;
+    letter-spacing: 5px;
+}
+
+.management-brand span {
+    color: #d8b77e;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.management-heading {
+    padding-top: 23px;
+}
+
+.management-eyebrow {
+    color: #d8b77e;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.management-heading h2 {
+    margin: 8px 0;
+    font-size: 25px;
+    color: white;
+}
+
+.management-heading p {
+    color: #d5e0e6;
+    margin: 0;
+    font-size: 14px;
+}
+
+.management-content {
+    padding: 30px 5px;
+}
+
+.management-card {
+    background: white;
+    border: 1px solid #e3e8eb;
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(25, 52, 72, .05);
+}
+
+.card-heading h3 {
+    color: #193448;
+    font-size: 19px;
+    margin: 0 0 8px;
+}
+
+.card-heading p {
+    color: #7b8790;
+    font-size: 13px;
+    margin: 0 0 22px;
+}
+
+.management-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.management-label {
+    color: #344b5a;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 9px;
+}
+
+.management-select {
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 11px 12px;
+    border: 1px solid #d9e0e5;
+    border-radius: 7px;
+    background: white;
+    color: #344b5a;
+    font-size: 14px;
+}
+
+    .management-select:focus {
+        outline: none;
+        border-color: #bd914b;
+        box-shadow: 0 0 0 3px rgba(189,145,75,.12);
+    }
+
+.management-button {
+    max-width: none;
+    margin-top: 20px;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 7px;
+    background: #193448;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .2s;
+}
+
+    .management-button:hover {
+        background: #bd914b;
+    }
+
+.management-message {
+    margin-top: 15px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tabla {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+    font-size: 13px;
+    color: #344b5a;
+}
+
+    .tabla th {
+        background: #193448;
+        color: white;
+        padding: 14px 12px;
+        text-align: left;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+
+    .tabla td {
+        padding: 13px 12px;
+        border-bottom: 1px solid #e8ecef;
+    }
+
+    .tabla tr:nth-child(even) td {
+        background: #f7f9fa;
+    }
+
+.management-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 5px;
+    border-top: 1px solid #e5e9ec;
+    color: #89949c;
+    font-size: 12px;
+}
+
+@media (max-width: 600px) {
+    .management-header {
+        padding: 24px;
+    }
+
+    .management-card {
+        padding: 20px;
+    }
+
+    .management-heading h2 {
+        font-size: 21px;
+    }
+
+    .management-footer {
+        justify-content: center;
+    }
+}
+
+
+
+
+/* CAMPO DE ENTRADA KAWA */
+
+.management-input {
+    width: 200px;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 11px 12px;
+    border: 1px solid #d9e0e5;
+    border-radius: 7px;
+    background: white;
+    color: #344b5a;
+    font-size: 14px;
+}
+
+    .management-input:focus {
+        outline: none;
+        border-color: #bd914b;
+        box-shadow: 0 0 0 3px rgba(189,145,75,.12);
+    }
+
+.management-form .management-label:not(:first-child) {
+    margin-top: 22px;
+}
+
+
+
+
+/* AREA DE OBSERVACIONES */
+
+.management-textarea {
+    width: 100%;
+    max-width: 500px;
+    min-height: 85px;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #d9e0e5;
+    border-radius: 7px;
+    background: white;
+    color: #344b5a;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 14px;
+    resize: vertical;
+}
+
+    .management-textarea:focus {
+        outline: none;
+        border-color: #bd914b;
+        box-shadow: 0 0 0 3px rgba(189,145,75,.12);
+    }
